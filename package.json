@@ -20,6 +20,8 @@
     "recoil": "^0.7.7"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-react": "^7.23.3",
     "@testing-library/jest-dom": "^6.2.1",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.11.5",
@@ -31,5 +33,11 @@
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   }
 }
