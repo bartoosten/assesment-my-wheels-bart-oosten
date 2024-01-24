@@ -6,6 +6,12 @@ As of now, this project is in a near-complete state but still under active devel
 
 I am particularly excited about the opportunity to review and discuss this code in detail during the upcoming interview. I am looking forward to it.
 
+[@Aronv90](https://github.com/Aronv90)
+[@zegenerative](https://github.com/zegenerative)
+
+Feel free to reach out to me:
+[@bartoosten](https://github.com/bartoosten)
+
 ## Getting Started
 
 First, run the development server:
