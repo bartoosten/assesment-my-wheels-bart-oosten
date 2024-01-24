@@ -16,9 +16,9 @@ export const VehicleFilter: React.FC = () => {
 
 	return (
 		<div className="name-container flex justify-start items-center w-full flex-col">
-			<div className="name-toolbar flex justify-start items-center flex-row w-full px-8 py-2 border-y border-surface-grey gap-2">
+			<div className="name-toolbar flex justify-start items-center flex-row w-full px-4 lg:px-8 py-2 border-b border-surface-grey gap-2">
 				<TextField placeholder="Type to search cars..." label="Search Cars" />
-				<Select placeholder={"All categories"} label="Search by Categories" />
+				{/* <Select placeholder={"All categories"} label="Search by Categories" /> */}
 				<div className="ml-auto">
 					<SegmentController label="Display Mode">
 						<Segment

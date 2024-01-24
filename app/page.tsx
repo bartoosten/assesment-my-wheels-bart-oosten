@@ -10,23 +10,24 @@ import { LogoTextual } from "@/components/icons";
 export default function Home() {
 	return (
 		<PageWrapper>
-			<Header
-				left={<LogoTextual size={120} />}
-				middle={
-					<Heading
-						title="Search Vehicles"
-						variant={HeadingVariantType.Default}
-					/>
-				}
-				right={""}
-			/>
-			<Main>
-				<VehicleFilter />
-				<VehicleDisplay />
-			</Main>
-			<Footer>
-				<Chip title="Cars Found" />
-			</Footer>
+			<div className="name-wrapper flex justify-start items-center flex-col w-full h-full">
+				<Header
+					left={<LogoTextual size={120} />}
+					right={
+						<Heading
+							title="Search Vehicles"
+							variant={HeadingVariantType.Default}
+						/>
+					}
+				/>
+				<Main>
+					<VehicleFilter />
+					<VehicleDisplay />
+				</Main>
+				<Footer>
+					<Chip title="Cars Found" />
+				</Footer>
+			</div>
 			<Aside>
 				<AdditionalInformation />
 			</Aside>

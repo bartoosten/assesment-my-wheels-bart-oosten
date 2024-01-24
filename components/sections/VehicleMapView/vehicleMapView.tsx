@@ -16,11 +16,11 @@ export const VehicleMapView: React.FC<VehicleMapViewProps> = ({
 	return (
 		<div
 			id="mapBoxContainer"
-			className="name-container flex justify-start items-start w-full h-full flex-col overflow-auto rounded-2xl shadow-sm bg-mono-grey-shade-100"
+			className="name-container flex justify-center items-center w-full h-full flex-col overflow-auto rounded-2xl shadow-sm bg-mono-grey-shade-100"
 		>
 			{/* The key make updates the map when userLocation is changed */}
 			<VehicleMap
-				key={`${userLocation.latitude}-${userLocation.longitude}`}
+				key={`${userLocation.latitude}-${userLocation.longitude}-${size.width}-${size.height}`}
 				longitude={userLocation.longitude}
 				latitude={userLocation.latitude}
 				width={size.width}

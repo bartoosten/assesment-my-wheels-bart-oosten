@@ -22,8 +22,8 @@ export const VehicleListItem: React.FC<VehicleListItemProps> = ({
 	price,
 }) => {
 	return (
-		<div className="flex w-full justify-start items-start flex-row shadow-sm rounded-xl bg-pure-light px-4 py-2 gap-2">
-			<div className="flex w-3/12 justify-start items-center flex-col p-4 gap-4">
+		<div className="flex w-full justify-start items-start flex-col lg:flex-row shadow-sm rounded-xl bg-pure-light px-4 py-2 gap-2">
+			<div className="flex w-full lg:w-3/12 justify-start items-center flex-col p-4 gap-4">
 				<div className="flex w-full justify-center items-center flex-row gap-2">
 					<Heading title={brand || ""} variant={HeadingVariantType.Default} />
 					<HeadingSmall
@@ -40,7 +40,7 @@ export const VehicleListItem: React.FC<VehicleListItemProps> = ({
 				/>
 				<ChipSmall title={fuel.fuelType} />
 			</div>
-			<div className="flex w-6/12 justify-start items-start flex-col p-4 gap-1">
+			<div className="flex w-full lg:w-6/12 justify-start items-start flex-col p-4 gap-1">
 				<div className="flex w-full justify-start items-center flex-row gap-2">
 					<Tile>
 						<IconLocation size={16} fill={"#32AF4B"} />
@@ -57,7 +57,7 @@ export const VehicleListItem: React.FC<VehicleListItemProps> = ({
 				{/* <Label title={address.latitude} />
 				<Label title={address.longitude} /> */}
 			</div>
-			<div className="flex w-3/12 justify-start items-start flex-col p-4 gap-2">
+			<div className="flex w-full lg:w-3/12 justify-start items-start flex-col p-4 gap-2">
 				<Heading title="Price" variant={HeadingVariantType.PrimaryBlue} />
 				<DataRow
 					label="Hour Rate"

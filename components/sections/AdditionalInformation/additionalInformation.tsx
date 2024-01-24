@@ -35,18 +35,21 @@ export const AdditionalInformation: React.FC = () => {
 
 	return (
 		<div className="flex justify-start items-center flex-col w-full">
-			<header className="name-header h-20 w-full flex flex-row justify-between items-center p-4 min-h-16 border-b border-primary-blue-shade-200">
+			<header className="name-header h-20 w-full flex flex-row justify-between items-center p-2 min-h-16 border-b border-primary-blue-shade-200">
 				<div className="name-left ml-4">
+					{/* <Heading
+						title="Additional Information"
+						variant={HeadingVariantType.PrimaryBlue}
+					/> */}
+				</div>
+				<div className="name-right ml-auto mr-4">
 					<Heading
 						title="Additional Information"
 						variant={HeadingVariantType.PrimaryBlue}
 					/>
 				</div>
-				<div className="name-right ml-auto mr-4">
-					{/* TODO: Maybe add a hide */}
-				</div>
 			</header>
-			<div className="name-information-blocks flex justify-start items-center flex-col w-full px-8 py-4 gap-4 ">
+			<div className="name-information-blocks flex justify-start items-center flex-col w-full p-4 pt-6 gap-4 ">
 				<InformationBlock
 					icon={<IconSettings size={16} fill={"#32AF4B"} />}
 					title="Optional Filters"

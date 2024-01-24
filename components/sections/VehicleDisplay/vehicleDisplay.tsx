@@ -29,7 +29,7 @@ export const VehicleDisplay: React.FC = () => {
 	const { data, loading, error } = useSearchVehicles();
 
 	return (
-		<div className="name-container flex justify-start items-start w-full h-full flex-col px-8 py-4">
+		<div className="name-container flex justify-start items-start w-full h-full flex-col px-4 lg:px-8 py-4">
 			{displayModeValue === 0 && (
 				<VehicleListView data={data} loading={loading} error={error} />
 			)}

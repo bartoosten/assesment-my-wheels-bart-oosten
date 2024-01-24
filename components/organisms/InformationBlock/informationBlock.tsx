@@ -14,7 +14,7 @@ export const InformationBlock: React.FC<InformationBlockProps> = ({
 	payload,
 }) => {
 	return (
-		<div className="flex justify-start items-start flex-col w-full shadow-sm rounded-xl bg-mono-dark px-4 py-4 pb-6 gap-2 border-2 border-primary-blue">
+		<div className="flex justify-start items-start flex-col w-full shadow-sm rounded-xl bg-mono-dark px-4 py-4 pb-6 gap-2">
 			<div className="flex justify-start items-center flex-row w-full gap-2">
 				<Tile>{icon}</Tile>
 				<HeadingSmall title={title} variant={HeadingSmallVariantType.Light} />
