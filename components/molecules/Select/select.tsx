@@ -27,12 +27,9 @@ export const Select: React.FC<SelectProps> = ({ placeholder, label }) => {
 			</Button>
 			<Popover>
 				<ListBox className="w-60 border-2 border-primary-blue rounded-xl px-4">
-					<ListBoxItem>Aardvark</ListBoxItem>
-					<ListBoxItem>Cat</ListBoxItem>
-					<ListBoxItem>Dog</ListBoxItem>
-					<ListBoxItem>Kangaroo</ListBoxItem>
-					<ListBoxItem>Panda</ListBoxItem>
-					<ListBoxItem>Snake</ListBoxItem>
+					<ListBoxItem>Option 1</ListBoxItem>
+					<ListBoxItem>Option 2</ListBoxItem>
+					<ListBoxItem>Option 3</ListBoxItem>
 				</ListBox>
 			</Popover>
 		</SelectAria>
