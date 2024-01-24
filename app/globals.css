@@ -1,33 +1,81 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-color-body: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Sans Serif - Omnes */
+
+@font-face {
+  font-family: 'Omnes-Light';
+  src: url(fonts/Omnes-Light.ttf);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: 'Omnes-Medium';
+  src: url(fonts/Omnes-Medium.ttf);
 }
+
+@font-face {
+  font-family: 'Omnes-Regular';
+  src: url(fonts/Omnes-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Omnes-SemiBold';
+  src: url(fonts/Omnes-SemiBold.ttf);
+}
+
+/* Sans Serif - SourceSansPro */
+
+@font-face {
+  font-family: 'SourceSansPro-Bold';
+  src: url(fonts/SourceSansPro-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Light';
+  src: url(fonts/SourceSansPro-Light.ttf);
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Regular';
+  src: url(fonts/SourceSansPro-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Semibold';
+  src: url(fonts/SourceSansPro-Semibold.ttf);
+}
+
+/* Extended className Utility */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Omnes-Regular", "sans-serif;
+  line-height: 1;
+  background-color: rgb(var(--background-color-body));
 }
