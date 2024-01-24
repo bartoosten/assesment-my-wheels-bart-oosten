@@ -1,5 +1,6 @@
 // Branding
 export { LogoTextual } from "./LogoTextual/logoTextual";
+export { LogoVisual } from "./LogoVisual/logoVisual";
 
 // Navigation
 export { IconModeMap } from "./IconModeMap/iconModeMap";
