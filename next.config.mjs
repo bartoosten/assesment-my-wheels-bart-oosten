@@ -1,6 +1,6 @@
 const nextConfig = {
     images: {
-      domains: ['mywheels.nl'],
+        remotePatterns: [{hostname: 'mywheels.nl'}],
     },
     async headers() {
       return [
