@@ -20,7 +20,7 @@ export const Segment = ({
 		<Button
 			onPress={onPress}
 			className={`
-				flex justify-center items-center w-full h-8 border-2 px-2 border-mono-light 
+				flex justify-center items-center w-full h-8 border-2 border-mono-light 
 				${index === 0 ? "rounded-s-lg" : "rounded-e-lg"} 
 				${isActive ? "bg-mono-dark" : "bg-mono-light"}				
 			`}

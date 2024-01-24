@@ -9,7 +9,7 @@ export const SegmentController = ({
 			<Label title={label} />
 			<div
 				className={
-					"flex justify-start items-center h-10 w-60 rounded-xl px-1 bg-mono-dark ml-auto"
+					"flex justify-start items-center h-10 w-40 lg:w-60 rounded-xl px-1 bg-mono-dark ml-auto"
 				}
 			>
 				{children}
