@@ -3,7 +3,7 @@ import {
 	VehicleFilter,
 	VehicleDisplay,
 	AdditionalInformation,
-	SearchResults,
+	SearchResultsAmount,
 } from "@/components/sections";
 import { Heading, HeadingVariantType } from "@/components/atoms";
 import { LogoTextual } from "@/components/icons";
@@ -26,7 +26,7 @@ export default function Home() {
 					<VehicleDisplay />
 				</Main>
 				<Footer>
-					<SearchResults />
+					<SearchResultsAmount />
 				</Footer>
 			</div>
 			<Aside>
