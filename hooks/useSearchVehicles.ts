@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { fetchVehicles } from "@/api/searchVehicles.server";
 
 // Improved custom hook with error handling
-export const useSearchVehicles = () => {
+export const useSearchVehicles = (filter: any) => {
 	const [loading, setLoading] = useState<boolean>(false);
 	const [data, setData] = useState<any>(null);
 	const [error, setError] = useState<Error | null>(null);
@@ -13,7 +13,7 @@ export const useSearchVehicles = () => {
 			setError(null);
 
 			try {
-				const result = await fetchVehicles();
+				const result = await fetchVehicles(filter);
 				setData(result);
 			} catch (err) {
 				if (err instanceof Error) {
