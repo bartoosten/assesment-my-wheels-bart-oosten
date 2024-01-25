@@ -1,13 +1,15 @@
 "use client";
 
-import { useRecoilValue } from "recoil";
+import { useRecoilValue, useSetRecoilState } from "recoil";
 import { VehicleListView, VehicleMapView } from "@/components/sections";
-import { DisplayMode, TimeFrame } from "@/recoil";
+import { DisplayMode, TimeFrame, SearchResults } from "@/recoil";
 import { useSearchVehicles } from "@/hooks/useSearchVehicles";
+import { useEffect } from "react";
 
 export const VehicleDisplay: React.FC = () => {
 	const displayModeValue = useRecoilValue(DisplayMode);
 	const timeFrameValue = useRecoilValue(TimeFrame);
+	const setSearchResultsValue = useSetRecoilState(SearchResults);
 
 	// Setting up the search parameters
 	const filter = {
@@ -22,6 +24,11 @@ export const VehicleDisplay: React.FC = () => {
 	};
 
 	const { data, loading, error } = useSearchVehicles(filter);
+
+	useEffect(() => {
+		// TOD0: Update shared state
+		setSearchResultsValue(data?.result.results.length || 0);
+	}, [data, setSearchResultsValue]);
 
 	return (
 		<div className="name-container flex justify-start items-start w-full h-full flex-col px-4 lg:px-8 py-4">

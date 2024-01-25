@@ -3,8 +3,9 @@ import {
 	VehicleFilter,
 	VehicleDisplay,
 	AdditionalInformation,
+	SearchResults,
 } from "@/components/sections";
-import { Heading, HeadingVariantType, Chip } from "@/components/atoms";
+import { Heading, HeadingVariantType } from "@/components/atoms";
 import { LogoTextual } from "@/components/icons";
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
 					<VehicleDisplay />
 				</Main>
 				<Footer>
-					<Chip title="Cars Found" />
+					<SearchResults />
 				</Footer>
 			</div>
 			<Aside>
