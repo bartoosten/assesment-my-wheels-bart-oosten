@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { fetchVehicles } from "@/api/searchVehicles.server";
+import { FilterType, ResponsePayload } from "@/types/searchVehiclesTypes";
 
 // Improved custom hook with error handling
-export const useSearchVehicles = (filter: any) => {
+export const useSearchVehicles = (filter: FilterType) => {
 	const [loading, setLoading] = useState<boolean>(false);
-	const [data, setData] = useState<any>(null);
+	const [data, setData] = useState<ResponsePayload | null>(null);
 	const [error, setError] = useState<Error | null>(null);
 
 	useEffect(() => {

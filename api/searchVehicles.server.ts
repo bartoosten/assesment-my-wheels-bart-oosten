@@ -1,11 +1,13 @@
 "use server";
 
+import { FilterType } from "@/types/searchVehiclesTypes";
+
 const MY_WHEELS_API_URL = process.env.NEXT_PUBLIC_MY_WHEELS_API_URL || "";
 const LOCAL_HOST = process.env.NEXT_PUBLIC_LOCAL_HOST || "";
 const MY_WHEELS_AUTH_APP_ID =
 	process.env.NEXT_PUBLIC_MY_WHEELS_AUTH_APP_ID || "";
 
-export async function fetchVehicles(filter: any) {
+export async function fetchVehicles(filter: FilterType) {
 	const response = await fetch(MY_WHEELS_API_URL, {
 		method: "POST",
 		headers: {
