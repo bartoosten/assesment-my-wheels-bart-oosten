@@ -1,8 +1,10 @@
 "use client";
 
+import { useRecoilValue } from "recoil";
 import Image from "next/image";
 import Map, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { SearchResults } from "@/recoil";
 
 export const VehicleMap: React.FC<VehicleMapProps> = ({
 	longitude,
@@ -12,6 +14,7 @@ export const VehicleMap: React.FC<VehicleMapProps> = ({
 }) => {
 	const mapboxToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 	const mapStyle = process.env.NEXT_PUBLIC_MAPBOX_STYLE;
+	const searchResultsValue = useRecoilValue(SearchResults);
 
 	return (
 		<Map
@@ -26,13 +29,29 @@ export const VehicleMap: React.FC<VehicleMapProps> = ({
 		>
 			<Marker longitude={4.895168} latitude={52.370216} anchor="center">
 				<Image
-					src={`/car-available.png`}
-					alt={`marker for vehicle`}
+					src={`/user.png`}
+					alt={`marker for user`}
 					width={32}
 					height={32}
 					priority
 				/>
 			</Marker>
+			{searchResultsValue.map((vehicle: any, i: any) => (
+				<Marker
+					longitude={vehicle.resource.longitude}
+					latitude={vehicle.resource.latitude}
+					anchor="center"
+					key={i}
+				>
+					<Image
+						src={`/car-available.png`}
+						alt={`marker for vehicle`}
+						width={32}
+						height={32}
+						priority
+					/>
+				</Marker>
+			))}
 		</Map>
 	);
 };
