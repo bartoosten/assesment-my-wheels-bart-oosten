@@ -19,9 +19,11 @@ export const VehicleDisplay: React.FC = () => {
 			// fuelType: "benzine",
 			// towbar: true,
 			// winterTires: true,
-			timeFrame: timeFrameValue,
+			// timeFrame: timeFrameValue,
 		},
 	};
+
+	const timeFrame = timeFrameValue;
 
 	const { data, loading, error } = useSearchVehicles(filter);
 

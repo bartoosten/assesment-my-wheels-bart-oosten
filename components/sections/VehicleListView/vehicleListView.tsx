@@ -32,7 +32,7 @@ export const VehicleListView: React.FC<VehicleListViewProps> = ({
 							chargeAdapterConnectedSince:
 								result.resource.chargeAdapterConnectedSince || 0,
 						}}
-						availability={result.availability || false}
+						availability={result.availability || "unavailable"}
 						price={{
 							hourRate: result.resource.price.hourRate || 0,
 							kilometerRate: result.resource.price.kilometerRate || 0,

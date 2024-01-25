@@ -24,7 +24,12 @@ export async function fetchVehicles(filter: any) {
 					longitudeMax: 9,
 					longitudeMin: 1,
 				},
-				filter: filter,
+				filter: {
+					...filter,
+					onlyFavorites: false,
+					onlyAvailable: false,
+				},
+				// timeFrame: timeFrame,
 			},
 		}),
 	});
