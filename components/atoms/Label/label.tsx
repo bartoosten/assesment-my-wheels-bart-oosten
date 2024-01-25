@@ -24,10 +24,12 @@ export enum LabelVariantType {
 	Default = "default",
 	PrimaryBlue = "primaryBlue",
 	PrimaryGreen = "primaryGreen",
+	Grey = "grey",
 }
 
 const colorMap: { [key in LabelVariantType]: string } = {
 	[LabelVariantType.Default]: "text-mono-grey-shade-600",
 	[LabelVariantType.PrimaryBlue]: "text-primary-blue",
 	[LabelVariantType.PrimaryGreen]: "text-primary-green",
+	[LabelVariantType.Grey]: "text-pure-light-shade-600",
 };

@@ -6,7 +6,7 @@ export const Text: React.FC<TextProps> = ({
 
 	return (
 		<p
-			className={`name-text text-sm font-omnes break-words leading-6 ${textColorVariant}`}
+			className={`name-text text-sm font-omnes break-words leading-6 tracking-wide ${textColorVariant}`}
 		>
 			{text}
 		</p>

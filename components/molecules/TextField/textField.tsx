@@ -7,7 +7,7 @@ export const TextField: React.FC<TextFieldProps> = ({ label, placeholder }) => {
 			<Label title={label} />
 			<Input
 				className={
-					"h-10 w-full lg:w-80 font-source-sans-pro tracking-wide border-3 border-mono-dark rounded-xl px-4 bg-mono-light"
+					"h-10 w-full lg:w-80 text-sm font-source-sans-pro tracking-wide border-3 border-mono-dark rounded-xl px-4 bg-mono-light"
 				}
 				placeholder={placeholder}
 			/>

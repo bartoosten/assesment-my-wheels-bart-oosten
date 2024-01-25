@@ -10,7 +10,7 @@ export const Button: React.FC<ButtonProps> = ({ title, handleOnPress }) => {
 		>
 			<span
 				className={
-					"name-heading text-pure-light text-md font-source-sans-pro capitalize tracking-wide"
+					"name-heading text-pure-light text-sm font-source-sans-pro capitalize tracking-wide"
 				}
 			>
 				{title}

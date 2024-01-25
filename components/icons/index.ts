@@ -10,3 +10,4 @@ export { IconModeList } from "./IconModeList/iconModeList";
 export { IconSelect } from "./IconSelect/iconSelect";
 export { IconSettings } from "./IconSettings/iconSettings";
 export { IconLocation } from "./IconLocation/iconLocation";
+export { IconPeriod } from "./IconPeriod/iconPeriod";
