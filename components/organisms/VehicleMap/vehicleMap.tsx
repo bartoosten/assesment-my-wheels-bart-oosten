@@ -1,6 +1,8 @@
 "use client";
 
-import Map from "react-map-gl";
+import Image from "next/image";
+import Map, { Marker } from "react-map-gl";
+import "mapbox-gl/dist/mapbox-gl.css";
 
 export const VehicleMap: React.FC<VehicleMapProps> = ({
 	longitude,
@@ -21,7 +23,17 @@ export const VehicleMap: React.FC<VehicleMapProps> = ({
 			}}
 			style={{ width: width, height: height }}
 			mapStyle={mapStyle}
-		/>
+		>
+			<Marker longitude={4.895168} latitude={52.370216} anchor="center">
+				<Image
+					src={`/car-available.png`}
+					alt={`marker for vehicle`}
+					width={32}
+					height={32}
+					priority
+				/>
+			</Marker>
+		</Map>
 	);
 };
 
