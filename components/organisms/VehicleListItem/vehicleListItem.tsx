@@ -5,8 +5,8 @@ import {
 	HeadingVariantType,
 	HeadingSmall,
 	HeadingSmallVariantType,
-	Label,
 	ChipSmall,
+	ChipVariantType,
 	DataValue,
 	DataValueType,
 	Tile,
@@ -54,7 +54,10 @@ export const VehicleListItem: React.FC<VehicleListItemProps> = ({
 						variant={HeadingSmallVariantType.PrimaryBlue}
 					/>
 				</div>
-				<ChipSmall title={availability} />
+				<ChipSmall
+					title={availability}
+					variant={ChipVariantType.Availability}
+				/>
 			</div>
 			<div className="flex w-full lg:w-3/12 justify-start items-start flex-col p-4 gap-2">
 				<Heading title="Price" variant={HeadingVariantType.PrimaryBlue} />

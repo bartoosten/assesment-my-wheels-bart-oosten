@@ -25,7 +25,6 @@ export const VehicleDisplay: React.FC = () => {
 			// fuelType: "benzine",
 			// towbar: true,
 			// winterTires: true,
-			// timeFrame: timeFrameValue,
 		},
 	};
 

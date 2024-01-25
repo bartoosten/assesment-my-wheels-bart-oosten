@@ -8,5 +8,5 @@ export { DataValue, DataValueType } from "./DataValue/dataValue";
 export { Label, LabelVariantType } from "./Label/label";
 export { Tile } from "./Tile/tile";
 export { Chip } from "./Chip/chip";
-export { ChipSmall } from "./ChipSmall/chipSmall";
+export { ChipSmall, ChipVariantType } from "./ChipSmall/chipSmall";
 export { Button } from "./Button/button";
