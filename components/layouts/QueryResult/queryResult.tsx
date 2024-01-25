@@ -1,22 +1,26 @@
-// Components
-import { Text } from "@/components/atoms";
+import { InformationBox } from "@/components/molecules";
 
 export const QueryResult: React.FC<QueryResultProps> = ({
 	children,
 	loading,
 	error,
 	data,
-	loadingComponent,
-	noDataComponent,
 }) => {
 	if (error) {
-		return <Text text={`ERROR: ${error.message}`} />;
+		return (
+			<InformationBox title="Error" message="Something went wrong, sorry" />
+		);
 	}
 	if (loading) {
-		return <>{loadingComponent || <Text text={`Loading`} />}</>;
+		return <InformationBox title="Loading" message="Just a moment please" />;
 	}
 	if (!data) {
-		return <>{noDataComponent || <Text text={`No information available`} />}</>;
+		return (
+			<InformationBox
+				title="No Information Found"
+				message="Contact support or try reloading"
+			/>
+		);
 	}
 	if (data) {
 		return children;
@@ -28,6 +32,4 @@ interface QueryResultProps {
 	loading: boolean;
 	error: any;
 	data: any;
-	loadingComponent?: React.ReactNode | React.ReactNode[];
-	noDataComponent?: React.ReactNode | React.ReactNode[];
 }
