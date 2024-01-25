@@ -16,7 +16,7 @@ export interface RequestPayload {
 export interface FilterType {
 	models: string[];
 	onlyAvailable: boolean;
-	fuelType: "benzine" | "electrisch";
+	fuelType: "benzine" | "elektrisch";
 	towbar: boolean;
 	winterTires: boolean;
 }
